@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Menu{% endblock %}
+{% block content %}
+<h1>Menu</h1>
+<div class="row">
+    {% for item in menu_items %}
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">{{ item.name }}</h5>
+                <p class="card-text">{{ item.description }}</p>
+                <p class="card-text">{{ item.price }}</p>
+                {% if item.available %}
+                <p class="card-text text-success">Available</p>
+                {% else %}
+                <p class="card-text text-danger">Not Available</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

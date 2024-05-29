@@ -1,10 +1,10 @@
+# about/views.py
 from django.shortcuts import render
-from django.http import HttpResponse
-
+from .models import About
 
 def about_view(request):
-    return HttpResponse("<h1>About Page</h1>")
-
+    about_info = About.objects.all()
+    return render(request, 'about/about.html', {'about_info': about_info})
 
 def index(request):
     return render(request, 'welcome.html')
