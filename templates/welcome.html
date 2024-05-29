@@ -1,5 +1,15 @@
 {% extends 'base.html' %}
+{% load static %}
+
 {% block title %}Welcome{% endblock %}
+
 {% block content %}
-<h1>Welcome to Our Restaurant</h1>
+<div class="container text-center" style="margin-top: 50px;">
+    <h1>Welcome to Our Restaurant</h1>
+    <div class="mt-5">
+        <a href="{% url 'about' %}" class="btn btn-primary btn-lg mx-2">About</a>
+        <a href="{% url 'menu' %}" class="btn btn-secondary btn-lg mx-2">Menu</a>
+        <a href="{% url 'contact' %}" class="btn btn-success btn-lg mx-2">Contact</a>
+    </div>
+</div>
 {% endblock %}
