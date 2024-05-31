@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+
+from django.contrib import staticfiles
 from dotenv import load_dotenv
 import os
 load_dotenv()
